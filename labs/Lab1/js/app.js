@@ -8,39 +8,51 @@ let size = 10;
 
 //setup the applicaiton 
 function setup() {
-    //create canvas of size 800 - big enough to draw on 
+    //create canvas of size 800 
     createCanvas(800, 600);
 
-    /*
-    stroke(255, 255, 255);
+    //set stroke color to light gray
+    stroke(190, 190, 190);
+
+    //set a stroke weight 
     strokeWeight(10);
 
-    fill(255, 99, 99);
-    circle(150, 150, 200);
-    fill(186, 255, 180);
+
+    fill(255, 0, 0, 160);
+    square(150, 150, 200);
+    fill(0, 255, 0, 160);
     circle(150, 150, 150);
-    fill(255, 171, 118);
-    circle(150, 150, 50);
-    */
+    fill(0, 0, 255, 160);
+    circle(300, 300, 150);
+
 
     console.log(size);
 }
 
 function draw() {
 
-    //increase size
+
+    //draw a circle at the center at an increasing size 
+    fill(255, 171, 118);
+    circle(150, 150, size);
+
+    fill(255, 0, 0, 160);
+    circle(300, 300, size);
+
 
     console.log(size);
 
-
-    //draw a circle at the center at an increasing size 
-    circle(150, 150, size);
-
-
 }
 
+/*
+create a function to increase the radius everytime the mouse is pressed.
+once it reaches past 80 pixels, it resets back to 10 pixels. 
+*/
+
 function mousePressed() {
-    if (size < 50) {
-        size += 1;
+    if (size < 80) {
+        size += 5;
+    } else {
+        size = 10;
     }
 }
