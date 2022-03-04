@@ -27,13 +27,13 @@ function getRadioValue() {
 function onSubmit() {
 
     //assign variable for moves in the game
-    var Selections = ["Rock", "Paper", "Scissors", "Guard"];
+    var Selections = ["Rock", "Paper", "Scissors"];
 
     //assign the getRadioValue function to a variable representing what the user chooses
     var humanGuess = getRadioValue();
 
     //assign the computer make random move based on the array
-    var computerGuess = Selections[Math.floor(Math.random() * 4)];
+    var computerGuess = Selections[Math.floor(Math.random() * 3)];
 
 
     //create variable to display the results within the div
