@@ -1,3 +1,7 @@
+//Brandon Green
+//3/24/2022
+//N220
+
 //create function to check credentials
 
 function onsubmitclick() {
