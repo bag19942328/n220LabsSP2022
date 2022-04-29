@@ -9,6 +9,8 @@ var memoryValues = [];
 var memoryCardIds = [];
 var cards_flipped = 0;
 
+
+
 //shuffle the values in the array 
 Array.prototype.memory_shuffle = function () {
     var i = this.length, j, temp;
@@ -50,6 +52,7 @@ function flipCard(cardTile, val) {
 
                 if (cards_flipped == memoryArr.length) {
                     alert("You Won! Congratulations!");
+                    playAgain.addEventListener("click", replay);
 
                 }
 
@@ -106,4 +109,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+//The replay function
+
+function replay() {
+    location.reload('https://bag19942328.github.io/n220LabsSP2022/labs/Final%20Project/Memory/index.html');
+}
+
 
